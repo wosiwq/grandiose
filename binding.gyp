@@ -16,6 +16,11 @@
       ],
       "conditions":[
         ["OS=='win'", {
+          "msvs_settings": {
+            "VCCLCompilerTool": {
+              "AdditionalOptions": [ "-std:c++17", ],
+            },
+          },
           # windows can't do rpath, so needs to be copied next to the .node file
           "copies":[
             {
